@@ -8,7 +8,6 @@ import { dirname, join } from "path";
 import markerRoutes from "./routes/markerRoutes.js";
 import campusRoutes from "./routes/campusRoutes.js";
 import mapRoutes from "./routes/mapRoutes.js";
-import botRouter from "./routes/botRoutes.js";
 import botRoutes from "./routes/botRoutes.js";
 
 dotenv.config();
