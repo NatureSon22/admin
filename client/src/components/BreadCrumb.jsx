@@ -15,7 +15,7 @@ const BreadCrumb = () => {
     <Breadcrumb>
       <BreadcrumbList>
         {breadcrumbs.map((breadcrumb, i) => (
-          <div key={breadcrumb.path} className="flex items-center gap-1">
+          <div key={breadcrumb.name} className="flex items-center gap-1">
             <BreadcrumbItem>
               {i === breadcrumbs.length - 1 ? (
                 <BreadcrumbPage className="text-secondary-100">
