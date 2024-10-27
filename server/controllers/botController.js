@@ -18,7 +18,9 @@ const fetchBots = async (req, res) => {
     );
 
     const data = await response.json();
-    res.status(200).json(data);
+    res
+      .status(200)
+      .json({ data: data, cookie: process.env.COOKIE, xsrf: process.env.XSRF });
   } catch (error) {
     res.status(500).json({ message: "Server error", error });
   }
