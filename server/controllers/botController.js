@@ -1,4 +1,8 @@
 import fetch from "node-fetch";
+import dotenv from "dotenv";
+import process from "process";
+
+dotenv.config();
 
 const fetchBots = async (req, res) => {
   try {
