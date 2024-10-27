@@ -11,6 +11,7 @@ const fetchBots = async (req, res) => {
       {
         method: "GET",
         headers: {
+          "Content-Type": "application/json",
           cookie: process.env.COOKIE,
           "x-xsrf-token": process.env.XSRF,
         },
