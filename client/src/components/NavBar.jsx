@@ -13,7 +13,7 @@ const NavBar = () => {
         <img className="size-10 rounded-full" src={profile} />
         <div className="text-base-300">
           <p className="text-[0.9rem] font-medium">Myoui Mina</p>
-          <p className="text-[0.75rem]">Binangonan</p>
+          <p className="text-[0.75rem]">Super Admin</p>
         </div>
       </div>
     </div>

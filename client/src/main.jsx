@@ -6,8 +6,12 @@ import App from "./App";
 import RegisterLayout from "./pages/layouts/RegisterLayout";
 import DashBoard from "./pages/dashboard/DashBoard";
 import SignInForm from "./pages/auth/SignInForm";
-import Documents from "./pages/docpage/Documents";
 import ResendPasswordForm from "./pages/auth/ResendPasswordForm";
+import CreateDocuments from "./pages/docpage/CreateDocuments";
+import CampusFolders from "./pages/docpage/CampusFolders";
+import CampusDocuments from "./pages/docpage/CampusDocuments";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import WriteDocument from "./pages/docpage/WriteDocument";
 
 const router = createBrowserRouter([
   {
@@ -16,11 +20,23 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/dashboard",
-        element: <DashBoard />,
+        element: <WriteDocument />,
       },
       {
         path: "/documents",
-        element: <Documents />,
+        element: <CampusFolders />,
+      },
+      {
+        path: "/all-documents/:campusName",
+        element: <CampusDocuments />,
+      },
+      {
+        path: "/create-documents/:campusName",
+        element: <CreateDocuments />,
+      },
+      {
+        path: "/create-documents/:campusName/write-document",
+        element: <WriteDocument />,
       },
     ],
   },
@@ -42,8 +58,12 @@ const router = createBrowserRouter([
   },
 ]);
 
+const queryClient = new QueryClient();
+
 createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
   </StrictMode>
 );

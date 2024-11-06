@@ -1,7 +1,7 @@
 import AuthGate from "./pages/auth/AuthGate";
 
 const App = () => {
-  return <AuthGate />;
+  return  <AuthGate />;
 };
 
 export default App;

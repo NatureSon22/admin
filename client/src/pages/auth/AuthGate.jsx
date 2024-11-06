@@ -11,7 +11,14 @@ const AuthGate = () => {
   //    - store in zustand
   // - if auth token doesn't exist, redirect to sign-in
 
-  return info ? <MainContainer /> : <Navigate to={"/sign-in"} />;
+  return info ? (
+    <>  
+      <MainContainer />
+      <Navigate to={"/dashboard"} />
+    </>
+  ) : (
+    <Navigate to={"/sign-in"} />
+  );
 };
 
 export default AuthGate;

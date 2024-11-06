@@ -20,6 +20,8 @@ export default {
         "secondary-200": "rgb(244, 245, 247)",
         "secondary-300": "rgb(252, 252, 252)",
         "accent-100": "rgb(255, 0, 0)",
+        "accent-200": "rgb(34, 197, 94)",
+        "accent-300": "rgb(249, 180, 0)",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
